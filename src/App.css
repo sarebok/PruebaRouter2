@@ -11,6 +11,23 @@ nav {
   justify-content: space-between;
   background-color: blanchedalmond;
 }
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.pizza-card {
+  background-color: aliceblue;
+  padding: 1rem;
+  margin: 0.1rem;
+}
+.card-img {
+  max-width: 20rem;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

@@ -3,8 +3,7 @@ import Card from "./Card";
 
 const Gallery = () => {
   return (
-    <div>
-      Gallery
+    <div className="gallery">
       <Card />
     </div>
   );
