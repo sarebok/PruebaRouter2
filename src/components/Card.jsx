@@ -1,22 +1,19 @@
-import React, { useContext } from "react";
-import { PizzaContext } from "../context/PizzaContext";
+import { useNavigate } from "react-router-dom";
 
-const Card = () => {
-  const { pizzaData } = useContext(PizzaContext);
+const Card = ({ pizza, img, price }) => {
+  const navigate = useNavigate();
+
+  const handleClick = (pizza) => {
+    navigate(`/pizza/${pizza}`);
+  };
   return (
     <>
-      {pizzaData?.map(({ id, img, name, ingredients }) => {
-        return (
-          <div key={id} className="pizza-card">
-            <img className="card-img" src={img} alt="" />
-            <p>{name}</p>
-            <p>Ingredientes:</p>
-            {/*             {ingredients.foreach((ingredient) => {
-              <p>{ingredient}</p>;
-            })} */}
-          </div>
-        );
-      })}
+      <img src={img} alt="" className="card-img" />
+      <h3>{pizza}</h3>
+      <h4>{price}</h4>
+      <button onClick={() => handleClick(pizza)}>Ver detalle</button>
+      <button onClick={() => handleClick(pizza)}>Agregar al carrito</button>
+      <button onClick={() => handleClick(pizza)}>Eliminar al carrito</button>
     </>
   );
 };

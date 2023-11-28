@@ -21,7 +21,7 @@ const Home = () => {
   useEffect(() => {
     const controller = new AbortController();
     const signal = controller.signal;
-
+    if (pizzaData) return;
     getPizzaData(signal);
     //cleanup
     return () => {
