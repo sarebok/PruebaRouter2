@@ -7,13 +7,13 @@ const NavBar = () => {
   const { calculateTotalPrice, cartItems } = useContext(PizzaContext);
   return (
     <nav>
-      <h1>LOGO</h1>
+      <h4>Profe no evalue css pos</h4>
       <div>
-        <NavLink className={({ isActive }) => (isActive ? "nombre-de-la-clase" : undefined)} to="/">
+        <NavLink className={({ isActive }) => (isActive ? "isActive" : undefined)} to="/">
           Home
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "nombre-de-la-clase" : undefined)} to="/cart">
-          Cart
+        <NavLink className={({ isActive }) => (isActive ? "isActive" : undefined)} to="/cart">
+          Carrito
         </NavLink>
       </div>
       <div>

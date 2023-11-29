@@ -13,8 +13,12 @@ const AddRemoveButtons = ({ id, pizza, price, img }) => {
 
   return (
     <div>
-      <button onClick={() => handleAddToCart({ id: id, name: pizza, price, img })}>Agregar</button>
-      <button onClick={() => handleRemoveFromCart(pizza)}>Eliminar</button>
+      <button className="anadir" onClick={() => handleAddToCart({ id: id, name: pizza, price, img })}>
+        Agregar
+      </button>
+      <button className="eliminar" onClick={() => handleRemoveFromCart(pizza)}>
+        Eliminar
+      </button>
     </div>
   );
 };
