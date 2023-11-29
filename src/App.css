@@ -41,10 +41,14 @@ nav {
   margin: 1rem;
 }
 
+.carrito-img {
+  max-width: 8rem;
+}
+
 .carrito-card h2,
 button {
-  padding: 0.5 rem;
-  margin: 0.5 rem;
+  padding: 0.5rem;
+  margin: 0.5rem;
 }
 @keyframes logo-spin {
   from {

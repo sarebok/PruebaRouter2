@@ -7,34 +7,37 @@ const ContextProvider = ({ children }) => {
   const [selectedPizza, setSelectedPizza] = useState("");
   const [cartItems, setCartItems] = useState([]);
 
-  ////
   const addToCart = (pizza) => {
-    // Check if an item with the same name already exists in the cart
     const existingItemIndex = cartItems.findIndex((item) => item.name === pizza.name);
 
     if (existingItemIndex !== -1) {
-      // If it exists, update the quantity instead of adding a duplicate
       const updatedCart = [...cartItems];
       updatedCart[existingItemIndex].quantity += 1;
       setCartItems(updatedCart);
     } else {
-      // If it doesn't exist, add the item to the cart
       setCartItems([...cartItems, { ...pizza, quantity: 1 }]);
     }
   };
-  ///
 
   const removeFromCart = (item) => {
-    const updatedCart = cartItems.filter((cartItem) => cartItem.name !== item);
-    setCartItems(updatedCart);
+    const existingItemIndex = cartItems.findIndex((cartItem) => cartItem.name === item);
+
+    if (existingItemIndex !== -1) {
+      const updatedCart = [...cartItems];
+      const updatedItem = { ...updatedCart[existingItemIndex] };
+      updatedItem.quantity -= 1;
+
+      if (updatedItem.quantity <= 0) {
+        updatedCart.splice(existingItemIndex, 1);
+      } else {
+        updatedCart[existingItemIndex] = updatedItem;
+      }
+
+      setCartItems(updatedCart);
+    }
   };
 
-  /* const calculateTotalPrice = () => {
-    return cartItems.reduce((total, item) => total + item.price, 0);
-  }; */
-
   const calculateTotalPrice = () => {
-    // Calculate the total price by considering quantities
     return cartItems.reduce((total, item) => total + item.price * item.quantity, 0);
   };
 

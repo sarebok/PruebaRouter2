@@ -17,7 +17,14 @@ const DetailedCard = () => {
       <div>
         <h2>{selectedPizza[0]?.name}</h2>
         <p>{selectedPizza[0]?.desc}</p>
-        <h2>{selectedPizza[0]?.price}</h2>
+        <h3>Ingredientes</h3>
+        <ul>
+          {selectedPizza[0]?.ingredients?.map((ingredient, index) => {
+            return <li key={index}>{ingredient}</li>;
+          })}
+        </ul>
+
+        <h2>Precio: ${selectedPizza[0]?.price}</h2>
       </div>
     </div>
   );

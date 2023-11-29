@@ -1,7 +1,10 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { PizzaContext } from "../context/PizzaContext";
 
 const NavBar = () => {
+  const { calculateTotalPrice, cartItems } = useContext(PizzaContext);
   return (
     <nav>
       <h1>LOGO</h1>
@@ -9,14 +12,14 @@ const NavBar = () => {
         <NavLink className={({ isActive }) => (isActive ? "nombre-de-la-clase" : undefined)} to="/">
           Home
         </NavLink>
-        <NavLink className={({ isActive }) => (isActive ? "nombre-de-la-clase" : undefined)} to="/pizza">
-          Pizza
-        </NavLink>
         <NavLink className={({ isActive }) => (isActive ? "nombre-de-la-clase" : undefined)} to="/cart">
           Cart
         </NavLink>
       </div>
-      <h3>monto</h3>
+      <div>
+        <p>Total Pedido: ${calculateTotalPrice()}</p>
+        {/* <p>Unidades: {cartItems.length}</p> */}
+      </div>
     </nav>
   );
 };
