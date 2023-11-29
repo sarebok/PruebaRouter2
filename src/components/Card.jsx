@@ -24,8 +24,6 @@ const Card = ({ pizza, img, price, id }) => {
       <h3>{pizza}</h3>
       <h4>${price}</h4>
       <button onClick={() => handleClick(pizza)}>Ver detalle</button>
-      {/* <button onClick={() => handleAddToCart({ id: id, name: pizza, price })}>Agregar al carrito</button>
-      <button onClick={() => handleRemoveFromCart(pizza)}>Eliminar al carrito</button> */}
       <AddRemoveButtons id={id} pizza={pizza} price={price} img={img} />
     </>
   );

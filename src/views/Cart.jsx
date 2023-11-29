@@ -7,7 +7,6 @@ const Cart = () => {
   return (
     <main>
       <h1>Carrito</h1>
-      {console.log(cartItems)}
       {cartItems.map(({ id, name, price, quantity, img }) => {
         return (
           <div key={id} className="carrito-card">
