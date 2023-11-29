@@ -32,6 +32,20 @@ nav {
 .card-img {
   max-width: 20rem;
 }
+
+.carrito-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+.carrito-card h2,
+button {
+  padding: 0.5 rem;
+  margin: 0.5 rem;
+}
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);

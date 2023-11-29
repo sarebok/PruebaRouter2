@@ -12,7 +12,7 @@ const Gallery = () => {
         {
           return (
             <div key={id} className="pizza-card">
-              <Card pizza={name} img={img} price={price} />
+              <Card pizza={name} img={img} price={price} id={id} />
             </div>
           );
         }

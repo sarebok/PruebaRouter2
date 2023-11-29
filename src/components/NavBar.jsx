@@ -16,6 +16,7 @@ const NavBar = () => {
           Cart
         </NavLink>
       </div>
+      <h3>monto</h3>
     </nav>
   );
 };
