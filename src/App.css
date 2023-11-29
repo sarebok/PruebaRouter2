@@ -1,17 +1,41 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+.title {
+  margin-bottom: 0;
+}
+
+.sub-title {
+  margin-bottom: 3rem;
 }
 
 nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: blanchedalmond;
+  background-color: rgba(202, 146, 82, 0.65);
+  height: 3rem;
 }
 
+nav div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 3rem;
+  color: black;
+  font-weight: 700;
+}
+
+nav h3 {
+  color: black;
+}
+
+main {
+  margin: 3rem;
+}
 img {
   border-radius: 5%;
 }
@@ -19,7 +43,6 @@ img {
 .gallery {
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   justify-content: center;
   align-items: center;
 }
@@ -28,6 +51,11 @@ img {
   background-color: aliceblue;
   padding: 1rem;
   margin: 0.1rem;
+  background-color: rgba(41, 190, 158, 0.15);
+}
+
+.pizza-card h3 {
+  color: rgb(17, 17, 17);
 }
 
 .detailed-card-container {
@@ -43,7 +71,7 @@ img {
   align-items: center;
   padding: 1rem;
   margin: 1rem;
-  background-color: rgb(246, 245, 244);
+  background-color: rgba(41, 190, 158, 0.15);
 }
 
 .carrito-img {
@@ -71,6 +99,7 @@ button {
 
 .isActive {
   text-decoration: underline;
+  color: black;
 }
 @keyframes logo-spin {
   from {

@@ -22,7 +22,7 @@ const Card = ({ pizza, img, price, id }) => {
     <>
       <img src={img} alt="" className="card-img" />
       <h3>{pizza}</h3>
-      <h4>${price}</h4>
+      <h3>${price}</h3>
       <button onClick={() => handleClick(pizza)}>Ver detalle</button>
       <AddRemoveButtons id={id} pizza={pizza} price={price} img={img} />
     </>

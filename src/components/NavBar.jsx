@@ -10,10 +10,10 @@ const NavBar = () => {
       <h4>Profe no evalue css pos</h4>
       <div>
         <NavLink className={({ isActive }) => (isActive ? "isActive" : undefined)} to="/">
-          Home
+          <h3>Home</h3>
         </NavLink>
         <NavLink className={({ isActive }) => (isActive ? "isActive" : undefined)} to="/cart">
-          Carrito
+          <h3>Carrito</h3>
         </NavLink>
       </div>
       <div>

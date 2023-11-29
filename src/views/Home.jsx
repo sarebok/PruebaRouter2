@@ -31,8 +31,8 @@ const Home = () => {
 
   return (
     <main>
-      <h1>Pizzeria Mamma Mia</h1>
-      <h4>Tenemos las pizzas sin css pero con harta funcionalidad :D</h4>
+      <h1 className="title">Pizzeria Mamma Mia</h1>
+      <h4 className="sub-title">Tenemos las pizzas sin css pero con harta funcionalidad :D</h4>
       <Gallery />
     </main>
   );
